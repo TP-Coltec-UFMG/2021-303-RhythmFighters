@@ -1,5 +1,5 @@
-# 2021-303-RhythmFighters
-
+# 2021-303-RhythmFighters 
+# Grupo: Gabriel Henrique, João Victor, Iago Diniz.
 ## Estrutura do Menu
 
   O menu de Rhythm Fighters conta com 2 telas interativas. A primeira, o menu principal, contém uma secção nomeada "jogar" com opções organizadas horizontalmente para jogar casualmente, competitivamente, ou para treinamento. A primeira e a última contendo duas outras opções cada (Jogar offline e jogar com amigos na categoria "casual", Campo de treinamento e guias na categoria "Treinamento"). A missão é que um jogador consiga perceber as três opções como parte de uma mesma categoria e que a divisão entre jogo casual e competitivo agilize a escolha de um jogador dependendo de seu objetivo.
