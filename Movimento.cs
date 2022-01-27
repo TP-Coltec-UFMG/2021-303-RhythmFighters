@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Movimento : MonoBehaviour {
+   public float collisionForce = 5f;
    public float speedMove = 5f; // VELOCIDADE MOVIMENTO
    public float jumpForce = 350f; // FORÇA DO PULO
    public LayerMask groundLayers; // LAYERS CONSIDERADA CHAO
@@ -20,8 +21,21 @@ public class Movimento : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("OnCollisionEnter2D");
+        if(col.gameObject.CompareTag("Player2")){
+            Debug.Log("Bateu");
+            rb.AddForce(Vector2.up*jumpForce/2);
+            if(!isLookRight){
+               //Se esta virado para esquerda inpulso pra direita
+             rb.AddForce(Vector2.right*collisionForce);
+            }else{
+               //Se esta virado para esquerda inpulso pra esquerda
+             rb.AddForce(Vector2.left*collisionForce);
+            }
+        }else if(col.gameObject.CompareTag("Chao")){
           isOnGround = true;
+
+        }
+
     }
    // MÉTODO FISICO UTILIZADO PRA MOVIMENTOS, POIS É CONSTANTE
    void FixedUpdate(){
