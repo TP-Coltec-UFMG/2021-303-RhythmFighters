@@ -4,7 +4,4 @@ using UnityEngine;
 
 public class HurtBoxScript : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D col){
-        Debug.Log(col.gameObject.name);
-    }
 }
